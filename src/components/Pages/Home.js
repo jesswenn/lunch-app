@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 const Home = (props) => { 
     return (
         <div className="btn-container">
-            <Button />
+            <Button /><Link to="/randomizer"><Button /></Link>
             <Button />
             <Button />
         </div>
