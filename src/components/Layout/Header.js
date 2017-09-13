@@ -1,14 +1,29 @@
-import React, { Component } from 'react';
-// import { Router, Route, IndexRoute, Link } from 'react-router';
+import React from 'react';
+import { Router, Route } from 'react-router';
+import { Link } from 'react-router-dom';
 
-const Header = (props) => { 
-    return (
-        <header>LOGO
-            {/* <Route path='home' component={Home}></Route>
-            <Route path='randomizer' component={Randomizer}></Route>
-            <Route path='info' component={Info}></Route> */}
-        </header>
-    );
+import Home from '../Pages/Home';
+import Randomizer from '../Pages/Randomizer';
+import Info from '../Pages/Info';
+
+
+export const Links = () => (
+    <nav>
+        <Link to='/'>HOME</Link>
+        <Link to='/randomizer'>RANDOMIZER</Link>
+        <Link to='/info'>INFO</Link>
+    </nav>
+)     
+
+
+class Header extends React.Component  { 
+    render() {
+        return (
+            <header>LOGO
+                <Links />
+            </header>
+        );
+    }
 }
-
+    
 export default Header;
