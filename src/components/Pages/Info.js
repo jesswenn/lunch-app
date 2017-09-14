@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 const Info = (props) => { 
     return (
-        <div className="info-container">
+        <main>
             <h2>INFO HERE</h2>
-        </div>
+            <div className="info-container">
+                
+            </div>
+        </main>
     );
 }
 
