@@ -7,14 +7,12 @@ const Randomizer = ({restaurantList}) => {
         return <p className='spinner-txt' key={index}>{restaurant.name}</p>
      
     })
-    
 
     const randomIndex = Math.floor( Math.random() * restaurants.length );
 
-
     return (
         <main>
-            <h1>SPINNER</h1>
+            <h1>SPINNER (fade out btns after click</h1>
             <div className="spinner-container">
                 {restaurants}
                 {/* <button>More info here</button>                 */}

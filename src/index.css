@@ -1,15 +1,14 @@
 html, body, #app {
     height: 100%;
     background-color:#F27794;
+    color: #fff;
 }
 
 body {
     font-family: 'Karla', sans-serif;
     margin: 0;
     padding: 0;
-    
 }
-
 
 /*  Wrapper all content container */
 .wrapper{
@@ -34,7 +33,6 @@ header{
     margin-top: 20px;
     width: 100px;
     height: 100px;
-
 }
 
 main {
@@ -42,24 +40,20 @@ main {
     width: 100%;
 }
 
-/* Button container */
 main, .btn-container, .spinner-container{
     display: flex;
     flex-flow: column wrap;
     width: 100%;
     align-items: center;
-    
 }
 
 button{
-    /* background-color: #fff; */
     box-sizing: border-box;
     border-radius: 2px;
     border: 1.3px solid #fff;
     background: none;
     width: 80%;
     color: #fff;
-    /* padding: 30px; */
     height: 150px;
     margin: 20px;
     outline: none;
@@ -71,5 +65,8 @@ button{
 
 .spinner-container{
     background-color: #fff;
+    color: #222;
+    border-radius: 2px;
     width: 80%;
+    font-size: 2rem;
 }
