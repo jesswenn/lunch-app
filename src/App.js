@@ -9,6 +9,8 @@ import Home from './components/Pages/Home';
 import Randomizer from './components/Pages/Randomizer';
 import Info from './components/Pages/Info';
 import Button from './components/Button/Button';
+import Restaurants from './Data/Restaurants.json';
+import Categories from './Data/Categories.json';
 
 const history = createHistory();
 
@@ -17,34 +19,28 @@ class App extends Component {
 		super();
 		this.state = {
 			step: 1,
-			categories: {
-				cat1: ['cat1a','cat1b','cat1c'],
-				cat2: ['cat2a','cat2b','cat2c'],
-				cat3: ['cat3a','cat3b','cat3c'],
-			}, 
 			selectedCategory: null,
+			restaurantsList: []
 		}
 	}
+
 //Funktion som kallas på när vi klickat på en katergori-knapp
+//Filter function går igenom varje item i arrayen
 	choosenCat (category) {
 		this.setState({
 			step: 2,
-			selectedCategory: category
+			restaurantsList: Restaurants.filter( (item) => { 
+				return item.cat_id === category 
+			})
 		});
-		console.log(category);
-		// randomizeChoosenCat();
-		// this.setState({
-		// 	selectedCategory: category,
-		// 	step: 3
-		// });
 	}
-	
+
 	renderSteps(){
 		if(this.state.step === 1) {
 			return <Home />
 
 		} else if(this.state.step === 2) {
-			return <Randomizer restaurantList={this.state.selectedCategory}/>
+			return <Randomizer restaurantList={this.state.restaurantsList}/>
 
 		} else if( this.state.step === 3) {
 			return <Info selectedCategory={this.state.selectedCategory}/>
@@ -54,20 +50,24 @@ class App extends Component {
 	render() {
 		return (
 			<div className='wrapper'>
-				<Header />
+				<Header />	
+				<main>		
+				<div className="btn-container">	
 				
-				<div className="btn-container">
-					{/* <input type='text' onChange={this.choosenCat.bind(this)}></input> */}
-					<Button btnTxt='Category 1' onClick={() => this.choosenCat(this.state.categories.cat1)}/>
-					<Button btnTxt='Category 2' onClick={() => this.choosenCat(this.state.categories.cat2)}/>
-					<Button btnTxt='Category 3' onClick={() => this.choosenCat(this.state.categories.cat3)}/>
+					{Categories.map((item, index) => {
+						return (
+							<Button 
+								key={ index } 
+								btnTxt={ item.name } 
+								onClick={ () => this.choosenCat(item.id) }/>
+						)	
+					})}	
 				</div>
 				{ this.renderSteps() }
-
+				</main>
 				<Footer />
 			</div>
 		);
 	}
 }
-
 export default App;

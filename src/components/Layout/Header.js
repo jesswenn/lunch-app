@@ -19,8 +19,8 @@ import Info from '../Pages/Info';
 class Header extends React.Component  { 
     render() {
         return (
-            <header>LOGO
-                {/* <Links /> */}
+            <header>
+                <div className="logo-container"></div>
             </header>
         );
     }

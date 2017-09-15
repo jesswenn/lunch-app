@@ -1,0 +1,47 @@
+[
+    {	
+        "name": "Jim&Jacob",
+        "link": "#",
+        "cat_id": "1"
+    },
+    {	
+        "name": "Yuc",
+        "link": "#",
+        "cat_id": "1"
+    },
+    {	
+        "name": "Raw",
+        "link": "#",
+        "cat_id": "1"
+    },
+    {	
+        "name": "Burger food truck",
+        "link": "#",
+        "cat_id": "2"
+    },
+    {	
+        "name": "Greasy spoon",
+        "link": "#",
+        "cat_id": "2"
+    },
+    {	
+        "name": "Kimama",
+        "link": "#",
+        "cat_id": "2"
+    },
+    {	
+        "name": "Masala",
+        "link": "#",
+        "cat_id": "3"
+    },
+    {	
+        "name": "Dumplings",
+        "link": "#",
+        "cat_id": "3"
+    },
+    {	
+        "name": "Take á way from ICA",
+        "link": "#",
+        "cat_id": "3"
+    }
+] 
