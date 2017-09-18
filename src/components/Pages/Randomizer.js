@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
+import Button from '../Button/Button';
 
 //Here you map through the array 
 const Randomizer = ({restaurantList}) => { 
     
     const restaurants = restaurantList.map((restaurant, index ) => {
-        return <p className='spinner-txt' key={index}>{restaurant.name}</p>
-     
+        return <div className="restaurant-container">
+                    <p className='spinner-txt' key={index}>{restaurant.name}</p>
+                </div>
     })
 
     const randomIndex = Math.floor( Math.random() * restaurants.length );
 
     return (
         <main>
-            <h1>SPINNER (fade out btns after click</h1>
             <div className="spinner-container">
                 {restaurants}
-                {/* <button>More info here</button>                 */}
             </div>
             <h2>Result:</h2>{ restaurants[randomIndex] }
+            
+            {/* Button should use the component  */}
+            <button class="info-btn">More info</button>
         </main>
     );
 }

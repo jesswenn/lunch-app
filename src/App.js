@@ -20,7 +20,8 @@ class App extends Component {
 		this.state = {
 			step: 1,
 			selectedCategory: null,
-			restaurantsList: []
+			restaurantsList: [],
+			// btnIcon: 
 		}
 	}
 
@@ -49,19 +50,19 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className='wrapper'>
+			<div className="wrapper">
 				<Header />	
 				<main>		
 				<div className="btn-container">	
 				
-					{Categories.map((item, index) => {
+					{ Categories.map((item, index) => {
 						return (
 							<Button 
-								key={ index } 
-								btnTxt={ item.name } 
+								key = { index } 
+								btnTxt = { item.name } 
 								onClick={ () => this.choosenCat(item.id) }/>
 						)	
-					})}	
+					}) }	
 				</div>
 				{ this.renderSteps() }
 				</main>
