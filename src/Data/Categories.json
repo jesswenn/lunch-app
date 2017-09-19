@@ -1,14 +1,12 @@
 [
     {	
-        "name": "Date Lunch",
-        "id": "1"
-    },
-    {	
         "name": "Formal Lunch",
-        "id": "2"
+        "id": "1",
+        "imgIcon": "./img/icon_work.png"
     },
     {	
         "name": "Work Lunch",
-        "id": "3"
+        "id": "2",
+        "imgIcon": "./img/icon_formal.png"
     }
 ] 

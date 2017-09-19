@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 const Button = (props) => { 
     return (
-        <button onClick={props.onClick}>icon here {props.btnTxt}</button>
+        <button className={ props.catBtn } onClick={ props.onClick }>
+            <img className='btn-icon' source={ props.btnIcon }/> 
+            { props.btnTxt }
+        </button>
     );
 }
 

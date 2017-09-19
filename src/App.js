@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Router, Route } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
+// import { Router, Route } from 'react-router';
+// import createHistory from 'history/createBrowserHistory';
 
 import './index.css'
 import Header from './components/Layout/Header';
@@ -12,7 +12,7 @@ import Button from './components/Button/Button';
 import Restaurants from './Data/Restaurants.json';
 import Categories from './Data/Categories.json';
 
-const history = createHistory();
+// const history = createHistory();
 
 class App extends Component {
 	constructor() {
@@ -21,8 +21,10 @@ class App extends Component {
 			step: 1,
 			selectedCategory: null,
 			restaurantsList: [],
-			// btnIcon: 
+			selectedRestaurant: null
 		}
+
+		this.onRestaurantSelected = this.onRestaurantSelected.bind(this);
 	}
 
 //Funktion som kallas på när vi klickat på en katergori-knapp
@@ -36,15 +38,33 @@ class App extends Component {
 		});
 	}
 
+	showInfo() {
+		this.setState({
+			step: 3
+		});
+	}
+
+	onRestaurantSelected( restaurant ) {
+		this.setState({ selectedRestaurant : restaurant });
+	}
+
 	renderSteps(){
-		if(this.state.step === 1) {
+		if( this.state.step === 1 ) {
 			return <Home />
 
-		} else if(this.state.step === 2) {
-			return <Randomizer restaurantList={this.state.restaurantsList}/>
-
-		} else if( this.state.step === 3) {
-			return <Info selectedCategory={this.state.selectedCategory}/>
+		} else if( this.state.step === 2 ) {
+			return (
+					<Randomizer 
+						restaurantList={this.state.restaurantsList}
+						onRestaurantSelected={ this.onRestaurantSelected }/>
+					)
+					// Lägg till infoknapp
+					{/* <Button 
+						key = { index } 
+						btnTxt = { item.name } 
+						onClick={ () => this.showInfo(item.id) } /> */}
+		} else if( this.state.step === 3 ) {
+			return <Info selectedRestaurant={this.state.selectedRestaurant}/>
 		}
 	}
 
@@ -60,7 +80,9 @@ class App extends Component {
 							<Button 
 								key = { index } 
 								btnTxt = { item.name } 
-								onClick={ () => this.choosenCat(item.id) }/>
+								onClick={ () => this.choosenCat(item.id) }
+								catBtn = 'cat-btn'
+								btnIcon = { item.imgIcon }/>
 						)	
 					}) }	
 				</div>
