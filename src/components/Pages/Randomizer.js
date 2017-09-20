@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import Button from '../Button/Button';
 import {TweenMax} from 'greensock';
 
-//Here you map through the array 
 class Randomizer extends Component {
 
     slotHeight = 99;
     selectedRestaurant;
 
+    //You set constructor when making global functions?
+    //If you want to reuse the functions?????
     constructor(props) {
         super(props);
         this.spin = this.spin.bind(this);
@@ -15,6 +16,7 @@ class Randomizer extends Component {
         this.stopSpinner = this.stopSpinner.bind(this);
     }
 
+    //Spin that randomizes the value and sets the variables and calls the moveSpinner method
     spin() {
         const restList = this.props.restaurantList;
         const randomRestIndex = Math.floor( Math.random() * restList.length );
@@ -25,13 +27,16 @@ class Randomizer extends Component {
     moveSpinnerOneStep( stepToGoTo, selectedRestaurantIndex, fullSpins ) {
         TweenMax.killTweensOf(this.refs.slots);
         
-        // Have we gone full circle?
+        //If stepToGoTo is equal to the restaurantsLenght +1
+        //The spins to go decreases with one
         if( stepToGoTo === this.props.restaurantList.length + 1 ) {
             stepToGoTo = 1;
             TweenMax.set( this.refs.slots, { y : 0 } );
             fullSpins--;
         }
 
+        //If it the spinner is les or equal to zero, 
+        // and cant move forward, then it stops at 
         if( fullSpins <= 0 && stepToGoTo === selectedRestaurantIndex ) {
             this.stopSpinner( stepToGoTo );
         } else {

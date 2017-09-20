@@ -2,11 +2,11 @@
     {	
         "name": "Formal Lunch",
         "id": "1",
-        "imgIcon": "./img/icon_work.png"
+        "imgIcon": "img/icon_formal.png"
     },
     {	
         "name": "Work Lunch",
         "id": "2",
-        "imgIcon": "./img/icon_formal.png"
+        "imgIcon": "img/icon_work.png"
     }
 ] 

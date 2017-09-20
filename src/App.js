@@ -73,20 +73,21 @@ class App extends Component {
 			<div className="wrapper">
 				<Header />	
 				<main>		
-				<div className="btn-container">	
-				
-					{ Categories.map((item, index) => {
-						return (
-							<Button 
-								key = { index } 
-								btnTxt = { item.name } 
-								onClick={ () => this.choosenCat(item.id) }
-								catBtn = 'cat-btn'
-								btnIcon = { item.imgIcon }/>
-						)	
-					}) }	
-				</div>
-				{ this.renderSteps() }
+					<div className="btn-container">	
+					
+						{ Categories.map((item, index) => {
+							return (
+								<Button 
+									key = { index } 
+									btnTxt = { item.name } 
+									onClick={ () => this.choosenCat(item.id) }
+									catBtn = 'cat-btn'
+									btnIcon = { item.imgIcon }/>
+
+							)	
+						}) }	
+					</div>
+					{ this.renderSteps() }
 				</main>
 				<Footer />
 			</div>
