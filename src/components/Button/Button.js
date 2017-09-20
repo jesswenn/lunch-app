@@ -7,10 +7,8 @@ const Button = (props) => {
         <button className={ props.catBtn } onClick={ props.onClick }>
             <img className='btn-icon' src={ props.btnIcon } /> 
 
-            { props.btnTxt }
-            
+            <span>{ props.btnTxt }</span>
 
-            
         </button>
     );
 }

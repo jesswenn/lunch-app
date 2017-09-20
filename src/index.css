@@ -69,7 +69,7 @@ main, .btn-container, .slot-machine, .slot-container {
     background-color: #fff;
     color: #222;
     border-radius: 2px;
-    width: 80%;
+    width: 90%;
     font-size: 1.8rem;
     box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
     position: relative;
@@ -98,15 +98,15 @@ button {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    padding-right: 1.3rem;
-    padding-left: 1.3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     position: relative;
     font-family: 'Brandon', sans-serif;
     box-sizing: border-box;
     border-radius: 3px;
     border: 1.3px solid #fff;
     background: none;
-    width: 80%;
+    width: 90%;
     color: #fff;
     height: 100px;
     margin: 20px;
@@ -119,6 +119,8 @@ button {
 
 button:hover {
     border: 1.5px solid #fff;
+    box-shadow: 0 2px 7px rgba(0,0,0,.3), 0 0px 1px rgba(0,0,0,.2);
+    
 }
 
 .btn-icon {
@@ -126,4 +128,46 @@ button:hover {
     height: 75px;
     padding-right: 10px;
 }
-   
+
+/*------------------------------------------------------------------------------
+ Media Querys
+------------------------------------------------------------------------------*/
+
+@media (min-width: 600px) { 
+    button{
+        max-width: 70%;            
+    }
+    .slot-machine{
+        max-width: 70%;
+    }
+ }
+
+
+@media (min-width: 900px) {  
+    button{
+        max-width: 60%;
+    }
+    .slot-machine{
+        max-width: 60%;
+    }
+}
+
+
+@media (min-width: 1200px) { 
+    button{
+        max-width: 50%;
+    }
+    .slot-machine{
+        max-width: 50%;
+    }
+}
+
+
+@media (min-width: 1800px) {
+    button{
+        max-width: 40%;
+    }
+    .slot-machine{
+        max-width: 40%;
+    }
+ }
