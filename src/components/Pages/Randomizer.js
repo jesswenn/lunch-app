@@ -14,6 +14,7 @@ class Randomizer extends Component {
         this.spin = this.spin.bind(this);
         this.moveSpinnerOneStep = this.moveSpinnerOneStep.bind(this);
         this.stopSpinner = this.stopSpinner.bind(this);
+        this.fetchLink = this.fetchLink.bind(this);
     }
 
     /* Spin that randomizes the value and sets the variables and calls the 
@@ -61,8 +62,13 @@ class Randomizer extends Component {
 
         TweenMax.to( this.refs.slots, 2, {
             y: -stepToGoTo * this.slotHeight,
-            ease: Elastic.easeOut
-        } );
+            ease: Elastic.easeOut,
+            onComplete: () => { this.fetchLink({selectedRestaurant}); }
+        });
+    }
+
+    fetchLink = (restInfo) => {
+        TweenMax.to(this.refs.link), 0.3, {autoAlpha: 1, display:'block'};
     }
 
     /* If new props are sent go to spin method again */ 
@@ -73,7 +79,7 @@ class Randomizer extends Component {
     }
     
     /* From start when this component is called run this lifecycle method */
-    componentDidMount () {
+    componentDidMount() {
         this.spin();
     }
 
@@ -88,7 +94,7 @@ class Randomizer extends Component {
 
         const restaurants = [ ...restaurantList, restaurantList[0] ].map((restaurant, index ) => {
             return (
-                <div key={index} className="restaurant-container">
+                <div key={index} className='restaurant-container'>
                     <p className='spinner-txt' >{restaurant.name}</p>
                 </div>
             )
@@ -97,12 +103,14 @@ class Randomizer extends Component {
         return (
             <main>
                 {/* spinner container = slotmachine */}
-                <div className="slot-machine">
+                <div className='slot-machine'>
                     <div ref='slots' className='slot-container'>
                         {restaurants}
                     </div>
                 </div>
-                
+                <a href='#'ref='link'>
+                    MORE INFO
+                </a>
                 {/* Button should use the component  */}
                 {/* <button class="info-btn">More info</button> */}
             </main>

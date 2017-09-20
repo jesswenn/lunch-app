@@ -3,36 +3,60 @@
         "restId": "1",
         "name": "Jim&Jacob",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "1"
     },
     {	
         "restId": "2",
         "name": "Yuc",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "1"
     },
     {	
         "restId": "3",
         "name": "Raw",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "1"
     },
     {	
         "restId": "4",
         "name": "Burger food truck",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "2"
     },
     {	
         "restId": "5",
         "name": "Greasy spoon",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "2"
     },
     {	
         "restId": "6",
         "name": "Kimama",
         "link": "#",
+        "cuisine": "",
+        "price_range": "",
+        "rating": "",
+        "address": "",
         "cat_id": "2"
     }
 ] 

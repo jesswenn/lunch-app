@@ -55,7 +55,7 @@ class App extends Component {
 		} else if( this.state.step === 2 ) {
 			return (
 					<Randomizer 
-						restaurantList={this.state.restaurantsList}
+						restaurantList={ this.state.restaurantsList }
 						onRestaurantSelected={ this.onRestaurantSelected }/>
 					)
 					// Lägg till infoknapp
@@ -70,24 +70,27 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="wrapper">
+			<div className='wrapper'>
 				<Header />	
 				<main>		
-					<div className="btn-container">	
+					<div className='btn-container'>	
 					
 						{ Categories.map((item, index) => {
 							return (
 								<Button 
 									key = { index } 
 									btnTxt = { item.name } 
+									btnIcon = { item.imgIcon }
 									onClick={ () => this.choosenCat(item.id) }
 									catBtn = 'cat-btn'
-									btnIcon = { item.imgIcon }/>
-
+								/>
 							)	
-						}) }	
+						})}	
+
 					</div>
+
 					{ this.renderSteps() }
+					{/* <Info /> */}
 				</main>
 				<Footer />
 			</div>
