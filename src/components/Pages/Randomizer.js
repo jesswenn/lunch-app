@@ -7,8 +7,8 @@ class Randomizer extends Component {
     slotHeight = 99;
     selectedRestaurant;
 
-    //You set constructor when making global functions?
-    //If you want to reuse the functions?????
+    /* You set constructor when making global functions?
+       If you want to reuse the functions????? */
     constructor(props) {
         super(props);
         this.spin = this.spin.bind(this);
@@ -16,7 +16,8 @@ class Randomizer extends Component {
         this.stopSpinner = this.stopSpinner.bind(this);
     }
 
-    //Spin that randomizes the value and sets the variables and calls the moveSpinner method
+    /* Spin that randomizes the value and sets the variables and calls the 
+       moveSpinner method */
     spin() {
         const restList = this.props.restaurantList;
         const randomRestIndex = Math.floor( Math.random() * restList.length );
@@ -27,29 +28,34 @@ class Randomizer extends Component {
     moveSpinnerOneStep( stepToGoTo, selectedRestaurantIndex, fullSpins ) {
         TweenMax.killTweensOf(this.refs.slots);
         
-        //If stepToGoTo is equal to the restaurantsLenght +1
-        //The spins to go decreases with one
+        /* If step t go to is equal to the restaurantsLenght +1
+           The spinns left decreases with one */
         if( stepToGoTo === this.props.restaurantList.length + 1 ) {
             stepToGoTo = 1;
             TweenMax.set( this.refs.slots, { y : 0 } );
             fullSpins--;
         }
 
-        //If it the spinner is les or equal to zero, 
-        // and cant move forward, then it stops at 
+        /* If it the spins that are left is less or equal to zero, and steps 
+           to go to equals the selected restaurant index the the stopSpinner 
+           method is called */
         if( fullSpins <= 0 && stepToGoTo === selectedRestaurantIndex ) {
             this.stopSpinner( stepToGoTo );
+
         } else {
             TweenMax.to( this.refs.slots, 0.1, {
                 y: -stepToGoTo * this.slotHeight,
                 ease: Linear.easeNone,
                 onComplete: () => {
-                    this.moveSpinnerOneStep( stepToGoTo + 1, selectedRestaurantIndex, fullSpins );
+                    this.moveSpinnerOneStep( 
+                        stepToGoTo + 1, selectedRestaurantIndex, fullSpins );
                 }
             });
         }
     }
 
+    /* Method that stops the spinner and send the selected restaurant as props??
+       to the onRestaurantSelected in App component */
     stopSpinner( stepToGoTo ) {
         this.props.onRestaurantSelected( this.selectedRestaurant );
 
@@ -59,16 +65,20 @@ class Randomizer extends Component {
         } );
     }
 
+    /* If new props are sent go to spin method again */ 
     componentWillReceiveProps(nextProps) {
         if(nextProps.restaurantList !== this.props.restaurantList) {
             this.spin();
         }
     }
     
+    /* From start when this component is called run this lifecycle method */
     componentDidMount () {
         this.spin();
     }
-    
+
+    /* When ... lifecycle method will end all animations so they do not run in 
+       the background */
     componentWillUnmount() {
         TweenMax.killTweensOf( this.refs.slots );
     }
