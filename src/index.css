@@ -2,7 +2,7 @@
  Button styling
 ------------------------------------------------------------------------------*/
 @font-face {
-    font-family: 'Brandon_reg';
+    font-family: 'Brandon_reg',Fallback, sans-serif;;
     font-style: normal;
     font-weight: 400;
     src: url('../src/Fonts/Brandon_reg.otf'); 
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Brandon_med';
+    font-family: 'Brandon_med', Fallback, sans-serif;;
     font-style: normal;
     font-weight: 500;
     src: url('../src/Fonts/Brandon_med.otf'); 
@@ -39,6 +39,7 @@ a {
     color: white;
     text-decoration: none;
     cursor: pointer;
+    align-items: center;
 }
 
 /*  Wrapper all content container */
@@ -64,8 +65,8 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 20px;
-    width: 270px;
-    height: 270px;
+    width: 180px;
+    height: 180px;
 }
 
 main {
@@ -111,7 +112,7 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 }
 
 .info-container {
-    /* height:500px; */
+    height:500px;
 }
 
 .rest-img {
@@ -165,26 +166,35 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 
 .menu-item-container {
     width: 90%;
+    height: 48px;
     text-align: center;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     box-sizing: border-box;
-    border: 1px solid red;
-    padding: 0.5rem 0 0.5rem 0;
+    /* border: 1px solid red; */
+
 }
 
 .menu a {
-    border: 1px solid red;
-    /* height: 3rem; */
-    /* padding:0.5rem; */
-    text-align: center;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    /* border: 1px solid red; */
+    
 }
 .menu a:hover {
     background-color: rgba(213, 172, 182, 0.5);
-    
 }
 
+/* CLASSNAME MORE INFO, link */
+.moreInfo-link{
+    padding-top: 20px;
+}
 
 /*------------------------------------------------------------------------------
  Button styling
