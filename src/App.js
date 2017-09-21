@@ -12,8 +12,6 @@ import Button from './components/Button/Button';
 import Restaurants from './Data/Restaurants.json';
 import Categories from './Data/Categories.json';
 
-// const history = createHistory();
-
 class App extends Component {
 	constructor() {
 		super();
@@ -23,12 +21,14 @@ class App extends Component {
 			restaurantsList: [],
 			selectedRestaurant: null
 		}
-
+		//To be able to re use the methods you bind them to the component they are in
 		this.onRestaurantSelected = this.onRestaurantSelected.bind(this);
+		this.choosenCat = this.choosenCat.bind(this);
+		this.showInfo = this.showInfo.bind(this);
 	}
 
-//Funktion som kallas på när vi klickat på en katergori-knapp
-//Filter function går igenom varje item i arrayen
+	//Funktion som kallas på när man klickat på en katergori-knapp
+	//Filter function går igenom varje item i arrayen
 	choosenCat (category) {
 		this.setState({
 			step: 2,
@@ -38,33 +38,37 @@ class App extends Component {
 		});
 	}
 
-	showInfo() {
+	showInfo( ) {
 		this.setState({
 			step: 3
 		});
 	}
 
 	onRestaurantSelected( restaurant ) {
-		this.setState({ selectedRestaurant : restaurant });
+		this.setState({ 
+			selectedRestaurant : restaurant 
+		});
 	}
 
 	renderSteps(){
 		if( this.state.step === 1 ) {
-			return <Home />
-
+			return (
+				<Home 
+					choosenCat={ this.choosenCat }/>
+			)
 		} else if( this.state.step === 2 ) {
 			return (
-					<Randomizer 
-						restaurantList={ this.state.restaurantsList }
-						onRestaurantSelected={ this.onRestaurantSelected }/>
-					)
-					// Lägg till infoknapp
-					{/* <Button 
-						key = { index } 
-						btnTxt = { item.name } 
-						onClick={ () => this.showInfo(item.id) } /> */}
+				<Randomizer 
+					restaurantList={ this.state.restaurantsList }
+					onRestaurantSelected={ this.onRestaurantSelected }
+					showInfo={ this.showInfo }/>
+				)
+					
 		} else if( this.state.step === 3 ) {
-			return <Info selectedRestaurant={this.state.selectedRestaurant}/>
+			return (
+				<Info 
+					selectedRestaurant={this.state.selectedRestaurant}/>
+			)
 		}
 	}
 
@@ -73,24 +77,7 @@ class App extends Component {
 			<div className='wrapper'>
 				<Header />	
 				<main>		
-					<div className='btn-container'>	
-					
-						{ Categories.map((item, index) => {
-							return (
-								<Button 
-									key = { index } 
-									btnTxt = { item.name } 
-									btnIcon = { item.imgIcon }
-									onClick={ () => this.choosenCat(item.id) }
-									catBtn = 'cat-btn'
-								/>
-							)	
-						})}	
-
-					</div>
-
 					{ this.renderSteps() }
-					{/* <Info /> */}
 				</main>
 				<Footer />
 			</div>

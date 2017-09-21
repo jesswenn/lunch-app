@@ -14,7 +14,7 @@ class Randomizer extends Component {
         this.spin = this.spin.bind(this);
         this.moveSpinnerOneStep = this.moveSpinnerOneStep.bind(this);
         this.stopSpinner = this.stopSpinner.bind(this);
-        this.fetchLink = this.fetchLink.bind(this);
+        // this.fetchLink = this.fetchLink.bind(this);
     }
 
     /* Spin that randomizes the value and sets the variables and calls the 
@@ -62,14 +62,14 @@ class Randomizer extends Component {
 
         TweenMax.to( this.refs.slots, 2, {
             y: -stepToGoTo * this.slotHeight,
-            ease: Elastic.easeOut,
-            onComplete: () => { this.fetchLink({selectedRestaurant}); }
+            ease: Elastic.easeOut
+            // onComplete: () => { this.fetchLink({this.selectedRestaurant}); }
         });
     }
 
-    fetchLink = (restInfo) => {
-        TweenMax.to(this.refs.link), 0.3, {autoAlpha: 1, display:'block'};
-    }
+    // fetchLink = (restInfo) => {
+    //     // TweenMax.to(this.refs.link), 0.3, {autoAlpha: 1, display:'block'};
+    // }
 
     /* If new props are sent go to spin method again */ 
     componentWillReceiveProps(nextProps) {
@@ -83,8 +83,8 @@ class Randomizer extends Component {
         this.spin();
     }
 
-    /* When ... lifecycle method will end all animations so they do not run in 
-       the background */
+    /* When ...the lifecycle method will end all animations so they do not run 
+    in the background */
     componentWillUnmount() {
         TweenMax.killTweensOf( this.refs.slots );
     }
@@ -101,19 +101,19 @@ class Randomizer extends Component {
         });
 
         return (
-            <main>
+            <div className='randomizer-container'>
                 {/* spinner container = slotmachine */}
                 <div className='slot-machine'>
                     <div ref='slots' className='slot-container'>
                         {restaurants}
                     </div>
                 </div>
-                <a href='#'ref='link'>
+                <a href='#'ref='link' onClick={ () => this.props.showInfo() } >
                     MORE INFO
                 </a>
                 {/* Button should use the component  */}
                 {/* <button class="info-btn">More info</button> */}
-            </main>
+            </div>
         );
     } 
 }
