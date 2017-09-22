@@ -2,7 +2,7 @@
  Button styling
 ------------------------------------------------------------------------------*/
 @font-face {
-    font-family: 'Brandon_reg',Fallback, sans-serif;;
+    font-family: 'Brandon_reg';
     font-style: normal;
     font-weight: 400;
     src: url('../src/Fonts/Brandon_reg.otf'); 
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: 'Brandon_med', Fallback, sans-serif;;
+    font-family: 'Brandon_med';
     font-style: normal;
     font-weight: 500;
     src: url('../src/Fonts/Brandon_med.otf'); 
@@ -111,10 +111,6 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     /* position: absolute; */
 }
 
-.info-container {
-    height:500px;
-}
-
 .rest-img {
     height: 15rem;
     width: 100%;
@@ -170,7 +166,7 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     box-sizing: border-box;
     /* border: 1px solid red; */
 
@@ -182,8 +178,8 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     cursor: pointer;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     /* border: 1px solid red; */
     
 }
@@ -220,11 +216,14 @@ button {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: lighter;
+    
 }
 
 button:hover {
     box-shadow: 0 2px 7px rgba(0,0,0,.3), 0 0px 1px rgba(0,0,0,.2);
+  
 }
+
 
 .btn-icon {
     width: 75px;
@@ -238,37 +237,106 @@ button:hover {
 
 @media (min-width: 600px) { 
     button{
-        max-width: 70%;            
+        max-width: 80%;            
     }
     .slot-machine{
-        max-width: 70%;
+        max-width: 80%;
+    }
+    .rest-img {
+        width: 80%;
+    }
+    .menu {
+        width: 80%;
+    }
+    .info {
+        width: 80%;
+    }
+    .menu-item-container {
+        width: 80%;
+        justify-content:center;
+    }
+    .menu a {
+        padding-left: 25px;
+        padding-right: 25px;
+        /* border: 1px solid red; */
     }
  }
 
 @media (min-width: 900px) {  
     button{
-        max-width: 60%;
+        max-width: 70%;
     }
     .slot-machine{
-        max-width: 60%;
+        max-width: 70%;
+    }
+    .rest-img {
+        width: 70%;
+    }
+    .menu {
+        width: 70%;
+    }
+    .info {
+        width: 70%;
+    }
+    /* .menu-item-container {
+        width: 70%;
+    } */
+    .menu a {
+        padding-left: 30px;
+        padding-right: 30px;
+        /* border: 1px solid red; */
     }
 }
 
 @media (min-width: 1200px) { 
     button{
-        max-width: 50%;
+        max-width: 60%;
     }
     .slot-machine{
-        max-width: 50%;
+        max-width: 60%;
+    }
+    .rest-img {
+        width: 60%;
+    }
+    .menu {
+        width: 60%;
+    }
+    .info {
+        width: 60%;
+    }
+    /* .menu-item-container {
+        width: 60%;
+    } */
+    .menu a {
+        padding-left: 40px;
+        padding-right: 40px;
+        /* border: 1px solid red; */
     }
 }
 
 
 @media (min-width: 1800px) {
     button{
-        max-width: 40%;
+        max-width: 50%;
     }
     .slot-machine{
-        max-width: 40%;
+        max-width: 50%;
+    }
+    .menu {
+        width: 50%;
+    }
+    .rest-img {
+        width: 50%;
+    }
+    .info {
+        width: 50%;
+    }
+    .menu-item-container {
+        width: 50%;
+    }
+    .menu a {
+        /* padding-left: 50px;
+        padding-right: 50px; */
+        /* border: 1px solid red; */
     }
  }
