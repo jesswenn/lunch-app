@@ -12,8 +12,8 @@
         "phone": "08-52728100",
         "address": "Karlbergsvägen 14",
         "cat_id": "1",
-        "img_url": "img/fish_miss_clara.jpg",
-        "desc": "The kitchen’s philosophy is to work in as natural way as possible. We change our meat, fish and vegetarian dishes every week."
+        "img_url": "img/tranan.jpg",
+        "desc": "A place to meet at, have a bite to eat and something to drink. That was how Tranan was know in 1929 by the residents of Stockholm, and that’s how it’s still known today - over 80 years later."
     },
     {	
         "restId": "2",
@@ -41,7 +41,8 @@
         "phone": "08-309680",
         "address": "Rörstrandsgatan 9 ",
         "cat_id": "1",
-        "img_url": "img/fish_miss_clara.jpg"
+        "img_url": "img/raw.jpg",
+        "desc": "Japan meets Europe in an elegant restaurant focusing on the rawness. At Raw sushi and sashimi coexists with hot dishes from the grill, bothmeat and shellfish."
     },
     {	
         "restId": "4",
@@ -54,7 +55,8 @@
         "phone": "08-216217",
         "address": "Odengatan 53",
         "cat_id": "2",
-        "img_url": "img/fish_miss_clara.jpg"
+        "img_url": "img/hStugan2.jpg",
+        "desc": "Come to Hamburgerstugan and get your life's best burger experience. They compile every burger with love daily. You get a day-to-day high-rise burger with home-made dressings and dip sauces. Gluten free bread is available."
     },
     {	
         "restId": "5",
@@ -67,7 +69,8 @@
         "phone": "08-12147043",
         "address": "Odengatan 60",
         "cat_id": "2",
-        "img_url": "img/fish_miss_clara.jpg"
+        "img_url": "img/masala.jpg",
+        "desc": "Masala Masala – Genuine Indian cuisine, also inspired by its neighboring countries. Our innovative chef has specially composed a number of new vegan dishes."
     },
     {	
         "restId": "6",
@@ -80,7 +83,8 @@
         "phone": "08-6683903",
         "address": "Kungstensgatan 33",
         "cat_id": "2",
-        "img_url": "img/fish_miss_clara.jpg"
+        "img_url": "img/meze.jpg",
+        "desc": "Babel is today both on Kungstensgatan at Sveavägen and on Långholmsgatan at Hornstull. Welcome to a fantastic dining experience guaranteed by Mamma Etimad!"
     },
     {	
         "restId": "7",
@@ -93,6 +97,7 @@
         "phone": "08-6733225",
         "address": "Luntmakargatan 65",
         "cat_id": "2",
-        "img_url": "img/fish_miss_clara.jpg"
+        "img_url": "img/korean.jpg",
+        "desc": "Mild or spicy. Gentle and sweet or tantalisingly hot. Anything is possible at Arirang. You can choose how to combine our dishes yourself or you can ask us for advice."        
     }
 ] 

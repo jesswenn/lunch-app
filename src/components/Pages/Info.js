@@ -26,6 +26,7 @@ class Info extends Component {
                         To the lunch menu
                     </a>
                 </div>
+                {/* ÄNDRA NAMN PÅ KLASS */}
                 <div className='menu'>
                     <div className='menu-item-container'>
                         <h3>DETAILS</h3>
@@ -33,11 +34,8 @@ class Info extends Component {
                 </div>
                 <div className='info'>
 
-                    <p className='details' >Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-                        et dolore magna aliqua. Pretium viverra suspendisse potenti 
-                        nullam. Sit amet nisl purus in mollis nunc sed. Viverra 
-                        aliquet eget sit amet tellus.
+                    <p className='details' >
+                    { selectedRestaurant.desc }
                     </p>
 
                 </div>
