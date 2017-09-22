@@ -1,66 +1,98 @@
 [
     {	
         "restId": "1",
-        "name": "Jim&Jacob",
-        "link": "http://www.jimjacob.se/",
+        "name": "Restaurang Tranan",
+        "menu_link": "http://www.tranan.se/restaurangen/meny/",
         "cuisine": [
-            "International",
             "European",
             "Swedish"
         ],
         "price_range": "$$-$$$",
-        "rating": "***",
-        "address": "Surbrunnsgatan 38",
-        "cat_id": "1"
+        "rating": "****",
+        "phone": "08-52728100",
+        "address": "Karlbergsvägen 14",
+        "cat_id": "1",
+        "img_url": "img/fish_miss_clara.jpg",
+        "desc": "The kitchen’s philosophy is to work in as natural way as possible. We change our meat, fish and vegetarian dishes every week."
     },
     {	
         "restId": "2",
-        "name": "Yuc",
-        "link": "#",
-        "cuisine": "Mexican",
-        "price_range": "$$",
-        "rating": "***",
-        "address": "xx",
-        "cat_id": "1"
+        "name": "Miss Clara",
+        "menu_link": "http://www.missclarahotel.com/restaurang/lunch-meny",
+        "cuisine": [
+            "International",
+            "Swedish"
+        ],
+        "price_range": "$$$",
+        "rating": "****",
+        "phone": "08-4406710",
+        "address": "Sveavägen 48",
+        "cat_id": "1",
+        "img_url": "img/fish_miss_clara.jpg",
+        "desc": "The kitchen’s philosophy is to work in as natural way as possible. They change our meat, fish and vegetarian dishes every week."
     },
     {	
         "restId": "3",
-        "name": "Raw",
-        "link": "#",
-        "cuisine": "Sushi",
-        "price_range": "$$$",
-        "rating": "**",
-        "address": "xx",
-        "cat_id": "1"
+        "name": "Raw Sushi & Grill",
+        "menu_link": "http://raw.se/lunch/",
+        "cuisine": "Japanese",
+        "price_range": "$$-$$$",
+        "rating": "***",
+        "phone": "08-309680",
+        "address": "Rörstrandsgatan 9 ",
+        "cat_id": "1",
+        "img_url": "img/fish_miss_clara.jpg"
     },
     {	
         "restId": "4",
-        "name": "Burger food truck",
-        "link": "#",
+        "name": "Hamburgarstugan",
+        "link": "http://www.hamburgarstugan.se/",
+        "menu_link": "http://www.hamburgarstugan.se/wp-content/uploads/2016/04/Meny-Original-A4.pdf",
         "cuisine": "Fast food",
         "price_range": "$",
-        "rating": "xx",
-        "address": "xx",
-        "cat_id": "2"
+        "rating": "***",
+        "phone": "08-216217",
+        "address": "Odengatan 53",
+        "cat_id": "2",
+        "img_url": "img/fish_miss_clara.jpg"
     },
     {	
         "restId": "5",
-        "name": "Greasy spoon",
-        "link": "#",
-        "cuisine": "Breakfast",
+        "name": "Masala Masala",
+        "link": "www.masalamasala.se",
+        "menu_link": "http://www.masalamasala.se/lunchmeny/",
+        "cuisine": "Indian",
         "price_range": "$$",
         "rating": "**",
-        "address": "xxx",
-        "cat_id": "2"
+        "phone": "08-12147043",
+        "address": "Odengatan 60",
+        "cat_id": "2",
+        "img_url": "img/fish_miss_clara.jpg"
     },
     {	
         "restId": "6",
-        "name": "Kimama",
-        "link": "#",
-        "cuisine": "xx",
-        "price_range": "$",
-        "rating": "**",
-        "address": "xx",
-        "cat_id": "2"
+        "name": "Babel Deli",
+        "link": "http://babeldeli.com/",
+        "menu_link": "http://babeldeli.com/wp-content/uploads/2016/02/takeawaywebb2.pdf",
+        "cuisine": "Meze",
+        "price_range": "$$",
+        "rating": "***",
+        "phone": "08-6683903",
+        "address": "Kungstensgatan 33",
+        "cat_id": "2",
+        "img_url": "img/fish_miss_clara.jpg"
+    },
+    {	
+        "restId": "7",
+        "name": "Arirang",
+        "link": "http://arirang.se/",
+        "menu_link": "http://arirang.se/lunch/",
+        "cuisine": "Korean",
+        "price_range": "$$",
+        "rating": "***",
+        "phone": "08-6733225",
+        "address": "Luntmakargatan 65",
+        "cat_id": "2",
+        "img_url": "img/fish_miss_clara.jpg"
     }
 ] 

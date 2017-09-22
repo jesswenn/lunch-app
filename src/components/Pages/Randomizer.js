@@ -109,7 +109,7 @@ class Randomizer extends Component {
                     </div>
                 </div>
                 <a className="moreInfo-link" href='#'ref='link' onClick={ () => this.props.showInfo() } >
-                    MORE INFO HERE
+                    MORE INFO
                 </a>
                 {/* Button should use the component  */}
                 {/* <button class="info-btn">More info</button> */}
