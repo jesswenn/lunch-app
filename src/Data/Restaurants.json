@@ -13,7 +13,11 @@
         "address": "Karlbergsvägen 14",
         "cat_id": "1",
         "img_url": "img/tranan.jpg",
-        "desc": "A place to meet at, have a bite to eat and something to drink. That was how Tranan was know in 1929 by the residents of Stockholm, and that’s how it’s still known today - over 80 years later."
+        "desc": "A place to meet at, have a bite to eat and something to drink. That was how Tranan was know in 1929 by the residents of Stockholm, and that’s how it’s still known today - over 80 years later.",
+        "position": {
+            "lat": 59.343172,
+            "lng": 18.049017
+        }
     },
     {	
         "restId": "2",
@@ -29,7 +33,11 @@
         "address": "Sveavägen 48",
         "cat_id": "1",
         "img_url": "img/fish_miss_clara.jpg",
-        "desc": "The kitchen’s philosophy is to work in as natural way as possible. They change our meat, fish and vegetarian dishes every week."
+        "desc": "The kitchen’s philosophy is to work in as natural way as possible. They change our meat, fish and vegetarian dishes every week.",
+        "position": {
+            "lat": 59.337522,
+            "lng": 18.062079
+        }
     },
     {	
         "restId": "3",
@@ -42,7 +50,11 @@
         "address": "Rörstrandsgatan 9 ",
         "cat_id": "1",
         "img_url": "img/raw.jpg",
-        "desc": "Japan meets Europe in an elegant restaurant focusing on the rawness. At Raw sushi and sashimi coexists with hot dishes from the grill, bothmeat and shellfish."
+        "desc": "Japan meets Europe in an elegant restaurant focusing on the rawness. At Raw sushi and sashimi coexists with hot dishes from the grill, bothmeat and shellfish.",
+        "position": {
+            "lat": 59.339795,
+            "lng": 18.033839
+        }
     },
     {	
         "restId": "4",
@@ -56,7 +68,11 @@
         "address": "Odengatan 53",
         "cat_id": "2",
         "img_url": "img/hStugan2.jpg",
-        "desc": "Come to Hamburgerstugan and get your life's best burger experience. They compile every burger with love daily. You get a day-to-day high-rise burger with home-made dressings and dip sauces. Gluten free bread is available."
+        "desc": "Come to Hamburgerstugan and get your life's best burger experience. They compile every burger with love daily. You get a day-to-day high-rise burger with home-made dressings and dip sauces. Gluten free bread is available.",
+        "position": {
+            "lat": 59.343554,
+            "lng": 18.054583
+        }
     },
     {	
         "restId": "5",
@@ -70,7 +86,11 @@
         "address": "Odengatan 60",
         "cat_id": "2",
         "img_url": "img/masala.jpg",
-        "desc": "Masala Masala – Genuine Indian cuisine, also inspired by its neighboring countries. Our innovative chef has specially composed a number of new vegan dishes."
+        "desc": "Masala Masala – Genuine Indian cuisine, also inspired by its neighboring countries. Our innovative chef has specially composed a number of new vegan dishes.",
+        "position": {
+            "lat": 59.34348,
+            "lng": 18.052472
+        }
     },
     {	
         "restId": "6",
@@ -84,7 +104,11 @@
         "address": "Kungstensgatan 33",
         "cat_id": "2",
         "img_url": "img/meze.jpg",
-        "desc": "Babel is today both on Kungstensgatan at Sveavägen and on Långholmsgatan at Hornstull. Welcome to a fantastic dining experience guaranteed by Mamma Etimad!"
+        "desc": "Babel is today both on Kungstensgatan at Sveavägen and on Långholmsgatan at Hornstull. Welcome to a fantastic dining experience guaranteed by Mamma Etimad!",
+        "position": {
+            "lat": 59.341657,
+            "lng": 18.059082
+        }
     },
     {	
         "restId": "7",
@@ -98,6 +122,10 @@
         "address": "Luntmakargatan 65",
         "cat_id": "2",
         "img_url": "img/korean.jpg",
-        "desc": "Mild or spicy. Gentle and sweet or tantalisingly hot. Anything is possible at Arirang. You can choose how to combine our dishes yourself or you can ask us for advice."        
+        "desc": "Mild or spicy. Gentle and sweet or tantalisingly hot. Anything is possible at Arirang. You can choose how to combine our dishes yourself or you can ask us for advice.",
+        "position": {
+            "lat": 59.340634,
+            "lng": 18.060196
+        }       
     }
 ] 

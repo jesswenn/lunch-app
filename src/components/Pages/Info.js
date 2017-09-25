@@ -38,9 +38,25 @@ class Info extends Component {
                     <p className='details' >
                     { selectedRestaurant.desc }
                     </p>
-                    <Map />
-
+                    
                 </div>
+                <div className='menu'>
+                    <div className='menu-item-container'>
+                        <h3>LOCATION</h3>
+                    </div>
+                </div>
+                <Map 
+                    center = { selectedRestaurant.position }
+                    zoom= {18}
+                    containerElement={
+                        <div style={{
+                            height: 300, 
+                            width:`100%`,
+                            marginTop: 20
+                        }} />
+                    }
+                    mapElement={<div style={{height:100+'%'}} />} 
+                />
             </div>
         );
     }

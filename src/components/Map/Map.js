@@ -1,33 +1,46 @@
 import React, { Component } from 'react';
-import GoogleMap from "react-google-map"
-import GoogleMapLoader from "react-google-maps-loader"
-
-const MY_API_KEY = "AIzaSyDwsdjfskhdbfjsdjbfksiTgnoriOAoUOgsUqOs10J0" // fake
+import { withGoogleMap,GoogleMap, Marker } from 'react-google-maps';
+// import GoogleMapLoader from 'react-google-maps-loader';
+// import iconMarker from './Logotypes/google_marker.png';
+// import PropTypes from 'prop-types';
 
 class Map extends Component {
     constructor() {
         super();
         this.state = {
-            coords: { lat: -25.363, lng: 131.044 },
-            map: new google.maps.Map(
-                document.getElementById('map'), {
-                    zoom: 4,
-                    center: coords 
-                }
-            ),
-            marker: new google.maps.Marker({
-                position: coords,
-                map: map
-            }),
-		}
-		this.initMap = this.initMap.bind(this);
+            map: null
+        }
+    }
+    mapMoved() {
+        console.log('mapMoved: ' + JSON.stringify(this.state.map.getCenter()))
+    }
 
+    mapLoaded(map) {
+        if (this.state.map != null) {
+            return 
+
+        } else {
+            this.setState ({
+                map: map
+            })            
+        }
     }
     render() {
-        return (
-            <div id='map'></div>
-        );
+        const markers = this.props.markers || [];
+
+        return(
+            <GoogleMap 
+                ref= {this.mapLoaded.bind(this)}
+                onDragEnd = {this.mapMoved.bind(this)}
+                defaultZoom = {this.props.zoom}
+                defaultCenter = { this.props.center }>  
+                {markers.map((marker, index) => (
+                    <Marker {...marker} />
+                ))}
+            
+            </GoogleMap>
+        )
     }
 }
 
-export default Map;
+export default withGoogleMap(Map);
