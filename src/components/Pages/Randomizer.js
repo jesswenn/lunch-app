@@ -102,7 +102,6 @@ class Randomizer extends Component {
 
         return (
             <div className='randomizer-container'>
-                {/* spinner container = slotmachine */}
                 <div className='slot-machine'>
                     <div ref='slots' className='slot-container'>
                         {restaurants}
@@ -111,8 +110,6 @@ class Randomizer extends Component {
                 <a className="moreInfo-link" href='#'ref='link' onClick={ () => this.props.showInfo() } >
                     MORE INFO
                 </a>
-                {/* Button should use the component  */}
-                {/* <button class="info-btn">More info</button> */}
             </div>
         );
     } 

@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Categories from './Data/Categories.json';
-
 
 const Button = (props) => { 
     return (
