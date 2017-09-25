@@ -135,7 +135,6 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 
 .info {
     width: 90%;
-    border: 1px solid red;
 }
 
 .info h1 {
@@ -237,116 +236,16 @@ button:hover {
 }
 
 /*------------------------------------------------------------------------------
+ Map styling
+------------------------------------------------------------------------------*/
+
+#map {
+    width: 100%;
+    height: 300px;
+    border: 1px solid white;
+    margin-top: 2rem;
+}
+/*------------------------------------------------------------------------------
  Media Queries
 ------------------------------------------------------------------------------*/
 
-/* @media (min-width: 600px) { 
-    button{
-        max-width: 80%;            
-    }
-    .slot-machine{
-        max-width: 80%;
-    }
-    .rest-img {
-        width: 80%;
-    }
-
-    .info-container {
-        margin-bottom: 5rem;
-    } */
-
-    /* .menu {
-        width: 100%;
-        height: 3rem;
-        margin-top: 1.7rem;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        font-weight: lighter;
-        box-sizing: border-box;
-    } */
-    /* .menu {
-        width: 80%;
-        
-    }
-    
-    .info {
-        width: 75%;
-    }
-    .menu-item-container {
-        width: 75%;
-    } */
- /* }
-
-@media (min-width: 900px) {  
-    button{
-        max-width: 70%;
-    }
-    .slot-machine{
-        max-width: 70%;
-    }
-
-    .info-container {
-        margin-bottom: 6rem;
-    }
-
-    .rest-img {
-        width: 70%;
-    }
-    .menu {
-        width: 70%;
-    }
-    .info {
-        width: 65%;
-    }
-    .menu-item-container {
-        width: 65%;
-    }
-}
-
-@media (min-width: 1200px) { 
-    button{
-        max-width: 60%;
-    }
-    .slot-machine{
-        max-width: 60%;
-    }
-    .rest-img {
-        width: 60%;
-    }
-    .menu {
-        width: 60%;
-    }
-    .info {
-        width: 55%;
-    }
-
-    .menu-item-container {
-        width: 55%;
-    }
-}
-
-
-@media (min-width: 1800px) {
-    button{
-        max-width: 50%;
-    }
-    .slot-machine{
-        max-width: 50%;
-    }
-    .menu {
-        width: 50%;
-    }
-    .rest-img {
-        width: 50%;
-    }
-    .info {
-        width: 45%;
-    }
-    .menu-item-container {
-        width: 45%;
-    }
- } */

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Map from '../Map/Map';
 
 class Info extends Component {
     render() {
@@ -37,6 +38,7 @@ class Info extends Component {
                     <p className='details' >
                     { selectedRestaurant.desc }
                     </p>
+                    <Map />
 
                 </div>
             </div>
