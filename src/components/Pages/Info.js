@@ -46,10 +46,10 @@ class Info extends Component {
                     </div>
                 </div>
                 <Map 
-                    center = { selectedRestaurant.position }
-                    zoom= {18}
-                    containerElement={
-                        <div style={{
+                    position = { selectedRestaurant.position }
+                    zoom = {18}
+                    containerElement ={
+                        <div style ={{
                             height: 300, 
                             width:`100%`,
                             marginTop: 20
