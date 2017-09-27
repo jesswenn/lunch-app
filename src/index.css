@@ -57,7 +57,7 @@ a:hover {
     width: 100%;
 }
 
-header{
+header {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -86,9 +86,11 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    /* justify-content: center; */
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .info-container {
@@ -103,7 +105,6 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     color: #222;
     border-radius: 2px;
     width: 90%;
-    font-size: 1.8rem;
     box-shadow: 0 2px 7px rgba(0,0,0,.3) inset, 0 0px 1px rgba(0,0,0,.2) inset;
     position: relative;
     overflow: hidden;
@@ -114,7 +115,7 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 .slot-container {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0;    
 }
 
 .moreInfo-link {
@@ -124,8 +125,10 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 .restaurant-container {
     text-align: center;
     width: 100%;
-    height:100%;
-    /* position: absolute; */
+    /* height: 100%; */
+    height:75px;
+    font-size: 1.6rem;
+    padding-top: 1.1rem;
 }
 
 .rest-img {
@@ -151,20 +154,6 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
 .details {
     padding-top: 1rem;
 }
-
-/* div[class="info"]:nth-child(2) p {
-    color: red;
-} */
-
-
-/* .info:first-child {
-    font-weight: lighter;
-    color:red;
-    background-color: red;
-} */
-/* .info:last-child {
-    margin-top: 2rem;
-} */
 
 .menu {
     width: 100%;
@@ -210,8 +199,8 @@ button {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    /* padding-right: 3rem;
+    /* padding-left: 3rem; */
     position: relative;
     font-family: 'Brandon', sans-serif;
     box-sizing: border-box;
@@ -236,7 +225,8 @@ button:hover {
 .btn-icon {
     width: 75px;
     height: 75px;
-    padding-right: 10px;
+    padding-right: 1rem;
+    padding-left: 1.5rem;
 }
 
 /*------------------------------------------------------------------------------
@@ -252,4 +242,8 @@ button:hover {
 /*------------------------------------------------------------------------------
  Media Queries
 ------------------------------------------------------------------------------*/
-
+@media (min-width: 900px) {  
+    .btn-icon {
+        padding-left: 3rem;
+    }
+}
