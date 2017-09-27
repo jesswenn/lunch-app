@@ -199,6 +199,7 @@ button {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    align-content: center;
     /* padding-right: 3rem;
     /* padding-left: 3rem; */
     position: relative;
