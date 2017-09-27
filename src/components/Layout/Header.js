@@ -6,16 +6,6 @@ import Home from '../Pages/Home';
 import Randomizer from '../Pages/Randomizer';
 import Info from '../Pages/Info';
 
-
-// export const Links = () => (
-//     <nav>
-//         <Link to='/'>HOME</Link>
-//         <Link to='/randomizer'>RANDOMIZER</Link>
-//         <Link to='/info'>INFO</Link>
-//     </nav>
-// )     
-
-
 class Header extends React.Component  { 
     render() {
         return (

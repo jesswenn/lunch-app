@@ -22,10 +22,6 @@ class Info extends Component {
                     <p>Price range: { selectedRestaurant.price_range }</p>
                     <p>Rating: { selectedRestaurant.rating }</p>
                     <p>Location: { selectedRestaurant.address }</p>
-                    <a target='_blank'className="menu-link" 
-                        href={ selectedRestaurant.menu_link }>
-                        To the lunch menu
-                    </a>
                 </div>
                 {/* ÄNDRA NAMN PÅ KLASS */}
                 <div className='menu'>
@@ -38,6 +34,10 @@ class Info extends Component {
                     <p className='details' >
                     { selectedRestaurant.desc }
                     </p>
+                    <a target='_blank'className="menu-link" 
+                        href={ selectedRestaurant.menu_link }>
+                        To the lunch menu
+                    </a>
                     
                 </div>
                 <div className='menu'>

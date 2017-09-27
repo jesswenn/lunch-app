@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
- Button styling
+ 
 ------------------------------------------------------------------------------*/
 @font-face {
     font-family: 'Brandon_reg';
@@ -21,7 +21,6 @@
 html, body, #app {
     height: 100%;
     background-color: #F27794; 
-    /* #ff0000 f42909 #350D17*/
     color: #fff;
 }
 
@@ -37,26 +36,18 @@ h1, h2, h3 {
 
 a {
     color: white;
-    /* text-decoration: none; */
     cursor: pointer;
     align-items: center;
 }
 
 a:hover {
-    /* text-decoration: underline; */
     color: #222;
     transition: 0.25s;
-
 }
 
-/*  Wrapper all content container */
-.wrapper{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    width: 100%;
-}
-
+/*------------------------------------------------------------------------------
+ Header where logo container
+------------------------------------------------------------------------------*/
 header {
     display: flex;
     flex-flow: column wrap;
@@ -64,16 +55,23 @@ header {
     width: 100%;
 }
 
-/*------------------------------------------------------------------------------
- Container styling
-------------------------------------------------------------------------------*/
 .logo-container{
-    background-image: url("./Logotypes/logo_white.png");
+    background-image: url("./Logotypes/lunch-app-logo.svg");
     background-repeat: no-repeat;
     background-size: cover;
     margin-top: 20px;
     width: 180px;
     height: 180px;
+}
+
+/*------------------------------------------------------------------------------
+ Container styling
+------------------------------------------------------------------------------*/
+.wrapper{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 main {
@@ -88,9 +86,10 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     align-items: center;
     /* justify-content: center; */
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 .info-container {
@@ -160,7 +159,7 @@ main, .btn-container, .randomizer-container, .slot-machine, .slot-container,
     padding: 0 5%;
     height: 3rem;
     margin-top: 1.7rem;
-    border-top: 1px solid white;
+    /* border-top: 1px solid white; */
     border-bottom: 1px solid white;
     display: flex;
     flex-flow: row wrap;
@@ -188,9 +187,10 @@ button {
     font-family: 'Brandon', sans-serif;
     box-sizing: border-box;
     border-radius: 3px;
-    border: 1.5px solid #fff;
+    border: 2px solid #fff;
     background: none;
     width: 90%;
+    /* height: 300px; */
     color: #fff;
     height: 100px;
     margin-bottom: 2.5rem;
@@ -225,8 +225,15 @@ button:hover {
 /*------------------------------------------------------------------------------
  Media Queries
 ------------------------------------------------------------------------------*/
-@media (min-width: 900px) {  
+@media (min-width: 800px) {  
+    button {
+        width: 80%;
+        height: 8rem;
+        font-size: 1.2rem;
+    }
     .btn-icon {
         padding-left: 3rem;
+        width: 90px;
+        height: 90px;
     }
 }
